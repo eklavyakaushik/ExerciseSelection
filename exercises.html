@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exercises — Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .exercise-page{max-width:1050px;margin:0 auto;padding:28px 42px 70px}
+    .exercise-nav{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .back-link{color:var(--muted);font-size:11px;text-decoration:none}.back-link:hover{color:var(--lime)}
+    .exercise-hero{padding:54px 0 32px}.exercise-hero h1{margin:12px 0 10px}.exercise-hero p{max-width:620px}
+    .exercise-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.exercise-meta span{border:1px solid var(--line);border-radius:20px;color:#a9bbaa;padding:7px 11px;font-size:10px}
+    .exercise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .exercise-card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:22px;min-height:170px;display:flex;flex-direction:column}
+    .exercise-card h2{font-size:20px;margin:0 0 8px}.exercise-card p{font-size:11px}.exercise-card footer{margin-top:auto;padding-top:20px;display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#91a99a}.exercise-card .tag{padding:0;border:0;color:var(--lime);font-size:9px}
+    .custom-heading{margin:36px 0 14px;color:#a6c778;font-size:9px;letter-spacing:2px}.empty-exercises{border:1px dashed #46664f;border-radius:10px;padding:22px;color:var(--muted);font-size:11px}
+    @media(max-width:700px){.exercise-page{padding:20px}.exercise-grid{grid-template-columns:1fr}.exercise-hero{padding:34px 0 25px}h1{font-size:36px!important}}
+  </style>
+</head>
+<body>
+  <main class="exercise-page">
+    <nav class="exercise-nav"><a class="brand" href="index.html">form<sup>®</sup></a><a class="back-link" href="index.html">← Back to muscle map</a></nav>
+    <section class="exercise-hero"><div class="eyebrow">YOUR EXERCISE LIBRARY</div><h1 id="page-title">Exercises</h1><p id="page-description">Choose a movement and build your routine around the muscle you selected.</p><div class="exercise-meta"><span id="parent-label"></span><span id="exercise-total"></span></div></section>
+    <section id="exercise-grid" class="exercise-grid"></section>
+    <section><div class="custom-heading">YOUR SAVED EXERCISES</div><div id="custom-exercises" class="empty-exercises">No custom exercises saved for this muscle yet.</div></section>
+  </main>
+  <script src="exercises.js"></script>
+</body>
+</html>
